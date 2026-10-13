@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fffaf2">
+<title>Tuft &amp; Create ♡</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:#fffaf2}
+  body{font-family:system-ui,sans-serif}
+  .page{position:relative;width:100%;max-width:1470px;margin:0 auto;line-height:0}
+  .design{display:block;width:100%;height:auto}
+  .hotspot{position:absolute;display:block;line-height:normal;background:transparent;border:0;cursor:pointer}
+  .hotspot:focus-visible{outline:3px solid #03A9F4;outline-offset:2px;border-radius:999px}
+  .whatsapp-hero{left:13.6%;top:34.8%;width:28.2%;height:7.4%}
+  .boutique{left:6.8%;top:77.5%;width:19%;height:5.8%}
+  .custom{left:39%;top:77.2%;width:17%;height:5.8%}
+  .projects{left:69.5%;top:77.5%;width:17%;height:5.8%}
+  .whatsapp-footer{left:64.5%;top:89.5%;width:18%;height:6%}
+  .hint{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);max-width:calc(100% - 24px);padding:9px 13px;border-radius:999px;background:rgba(55,68,73,.92);color:white;font:12px/1.4 system-ui,sans-serif;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s}
+  .hint.show{opacity:1}
+  @media(max-width:600px){.hint{font-size:11px}}
+</style>
+</head>
+<body>
+<main class="page" aria-label="Tuft & Create — maquette visuelle fidèle">
+  <img class="design" src="assets/tuft-create-design.png" alt="Maquette complète Tuft & Create : boutique créative aux tons crème, bleu et rose, motifs de tissus fleuris, illustrations et petit lapin." width="1470" height="1070">
+  <!-- Zones cliquables transparentes : l’image d’origine reste visuellement intacte. -->
+  <a class="hotspot whatsapp-hero" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Contacter Tuft & Create sur WhatsApp"></a>
+  <a class="hotspot boutique" href="#boutique" aria-label="Voir la boutique" data-hint="Cette zone est un lien de démonstration : ajoutez ici l’URL de votre boutique."></a>
+  <a class="hotspot custom" href="#custom" aria-label="Découvrir les créations sur mesure" data-hint="Ajoutez ici la page de créations sur mesure."></a>
+  <a class="hotspot projects" href="#projects" aria-label="Voir les derniers projets" data-hint="Ajoutez ici la page des projets."></a>
+  <a class="hotspot whatsapp-footer" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Contacter par WhatsApp"></a>
+</main>
+<div class="hint" id="hint" role="status"></div>
+<script>
+  // Remplacez le lien https://wa.me/ par https://wa.me/VOTRENUMERO
+  // Exemple : https://wa.me/212600000000 (chiffres internationaux, sans + ni espaces).
+  const hint = document.getElementById('hint');
+  let timer;
+  document.querySelectorAll('[data-hint]').forEach(el => {
+    el.addEventListener('click', event => {
+      event.preventDefault();
+      hint.textContent = el.dataset.hint;
+      hint.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(() => hint.classList.remove('show'), 3000);
+    });
+  });
+</script>
+</body>
+</html>
