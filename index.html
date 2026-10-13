@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuft & Create | Outils · Design · Handmade</title>
+    <!-- 引入艺术手写字体和可爱字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF5EE;       /* 温暖米白绘本底色 */
+            --card-bg: #FFFFFF;
+            --primary-pink: #FFB6C1;   /* 温馨粉色 */
+            --deep-pink: #FF7B90;     /* 按钮深粉色 */
+            --soft-blue: #D6E4FF;     /* 治愈淡蓝色 */
+            --text-color: #5C5248;     /* 柔和深棕灰文字 */
+            --border-radius: 28px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* 顶部参考图风格导航栏 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5%;
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 20px rgba(255, 182, 193, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #F0ECE6;
+        }
+
+        .logo-box {
+            cursor: pointer;
+        }
+
+        .logo-main {
+            font-family: 'Caveat', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #4A403A;
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: #8B7D74;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--deep-pink);
+        }
+
+        .whatsapp-top-btn {
+            background-color: var(--deep-pink);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(255, 123, 144, 0.3);
+        }
+
+        /* 主视口容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* 首页 Banner —— 完美还原参考图治愈插画氛围 */
+        .hero-banner {
+            background: linear-gradient(135deg, #FFF0F3 0%, #EBF3FF 100%);
+            border-radius: 32px;
+            padding: 50px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border: 3px dashed #C8DEFF;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(214, 228, 255, 0.25);
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            color: #4A403A;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: #7A6F66;
+            margin-bottom: 25px;
+            max-width: 480px;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--deep-pink);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 6px 18px rgba(255, 123, 144, 0.4);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-illustration {
+            font-size: 6rem;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px 45px;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            border: 2px solid #FFF;
+        }
+
+        /* 仿参考图的分类图标横排卡片 */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .category-item {
+            background: var(--card-bg);
+            padding: 22px 15px;
+            border-radius: 22px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            border: 2px solid #F0ECE6;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-pink);
+            background-color: #FFFDFB;
+        }
+
+        .cat-icon-wrap {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .category-item span {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #5C5248;
+        }
+
+        /* 商品列表区域 */
+        .section-title {
+            font-size: 1.6rem;
+            color: #4A403A;
+            margin-bottom: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(214, 228, 255, 0.2);
+            border: 2px solid #F0ECE6;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(255, 182, 193, 0.25);
+        }
+
+        .product-img-box {
+            width: 100%;
+            height: 220px;
+            background: #F7F3EE;
+            overflow: hidden;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-img-box img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #4A403A;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: #8B7D74;
+            height: 40px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #FF6B8B;
+        }
+
+        .detail-link-btn {
+            background-color: #EBF3FF;
+            color: #3B5998;
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* ================= 详情页样式 ================= */
+        .back-btn {
+            background: #EFECE6;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #6C6057;
+            margin-bottom: 25px;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #E5DDD3;
+        }
+
+        .detail-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 2px solid #F0ECE6;
+        }
+
+        .gallery-main-img {
+            width: 100%;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #F7F3EE;
+            margin-bottom: 15px;
+        }
+
+        .gallery-main-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 12px;
+        }
+
+        .thumb {
+            width: 75px;
+            height: 75px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #F7F3EE;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .thumb.active, .thumb:hover {
+            border-color: var(--deep-pink);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .detail-info h1 {
+            font-size: 2rem;
+            color: #4A403A;
+            margin-bottom: 15px;
+        }
+
+        .detail-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF6B8B;
+            margin-bottom: 20px;
+        }
+
+        .detail-text {
+            font-size: 0.98rem;
+            color: #6C6057;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        .order-card {
+            background: #FAF8F5;
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px dashed #E5DDD3;
+        }
+
+        .order-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: #4A403A;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #E8E2D8;
+            border-radius: 12px;
+            outline: none;
+            background: white;
+            font-size: 0.95rem;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--deep-pink);
+        }
+
+        .whatsapp-order-btn {
+            width: 100%;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: background 0.2s;
+        }
+
+        .whatsapp-order-btn:hover {
+            background-color: #20ba5a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #8B7D74;
+            font-size: 0.88rem;
+            margin-top: 50px;
+            border-top: 2px solid #F0ECE6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .detail-box {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="navbar">
+        <div class="logo-box" onclick="goHome()">
+            <div class="logo-main">Tuft & Create 🤍</div>
+            <div class="logo-sub">Outils · Design · Handmade</div>
+        </div>
+        <nav class="nav-menu">
+            <a onclick="goHome()">Accueil</a>
+            <a onclick="filterCat('tool')">Boutique (Tufting)</a>
+            <a onclick="filterCat('design')">Sur mesure (Design)</a>
+            <a href="https://wa.me/你的WhatsApp号码" target="_blank" class="whatsapp-top-btn">💬 WhatsApp</a>
+        </nav>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="container">
+
+        <!-- 首页视图 -->
+        <div id="home-view">
+            <!-- 头部大 Banner -->
+            <div class="hero-banner">
+                <div class="hero-text">
+                    <h1>Crée ton propre univers ♡</h1>
+                    <p>专业 Tufting 工具、配件、创意视觉设计与专属定制，带你进入温馨的手作童话世界！</p>
+                    <a class="hero-btn" onclick="filterCat('all')">✨ 探索全部好物</a>
+                </div>
+                <div class="hero-illustration">
+                    🐰🧶
+                </div>
+            </div>
+
+            <!-- 分类小圆块（对应参考图中的图标导航） -->
+            <div class="categories-grid">
+                <div class="category-item" onclick="filterCat('tool')">
+                    <div class="cat-icon-wrap">🔫</div>
+                    <span>Tufting Gun</span>
+                </div>
+                <div class="category-item" onclick="filterCat('tool')">
+                    <div class="cat-icon-wrap">✂️</div>
+                    <span>推子与剪刀</span>
+                </div>
+                <div class="category-item" onclick="filterCat('tool')">
+                    <div class="cat-icon-wrap">🧶</div>
+                    <span>毛线配件</span>
+                </div>
+                <div class="category-item" onclick="filterCat('design')">
+                    <div class="cat-icon-wrap">🖼️</div>
+                    <span>海报 & 设计</span>
+                </div>
+                <div class="category-item" onclick="filterCat('design')">
+                    <div class="cat-icon-wrap">💡</div>
+                    <span>创意定制</span>
+                </div>
+            </div>
+
+            <!-- 商品与服务列表 -->
+            <h2 class="section-title" id="list-heading">🌟 精选商品与定制服务</h2>
+            <div class="products-grid" id="products-container">
+                <!-- 由 JavaScript 动态渲染 -->
+            </div>
+        </div>
+
+        <!-- 详情页视图 -->
+        <div id="detail-view" class="hidden">
+            <button class="back-btn" onclick="goHome()">← 返回首页</button>
+
+            <div class="detail-box">
+                <!-- 左侧多图展示 -->
+                <div>
+                    <div class="gallery-main-img">
+                        <img id="main-img" src="" alt="商品大图">
+                    </div>
+                    <div class="gallery-thumbs" id="thumbs-container">
+                        <!-- 缩略图由 JS 动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 右侧文本与 WhatsApp 下单 -->
+                <div class="detail-info">
+                    <h1 id="det-title">商品名称</h1>
+                    <div class="detail-price" id="det-price">¥ 0.00</div>
+                    <div class="detail-text" id="det-desc">详细介绍...</div>
+
+                    <div class="order-card">
+                        <h3>💌 喜欢这款？通过 WhatsApp 快速预约或下单</h3>
+                        <form onsubmit="submitOrder(event)">
+                            <div class="input-group">
+                                <label>您的称呼：</label>
+                                <input type="text" id="cust-name" placeholder="例如：小美" required>
+                            </div>
+                            <div class="input-group">
+                                <label>收货地址 / 尺寸与设计具体要求：</label>
+                                <textarea id="cust-note" rows="3" placeholder="请填写您的收货地址或定制要求..." required></textarea>
+                            </div>
+                            <button type="submit" class="whatsapp-order-btn">📲 发送订单至 WhatsApp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 Tuft & Create | 用可爱治愈你的手作与生活 🌸</p>
+    </footer>
+
+    <script>
+        // 商品数据：你可以在这里替换为自己的真实图片链接
+        const products = [
+            {
+                id: 1,
+                category: 'tool',
+                title: '专业级二合一 Tufting Gun (簇绒枪)',
+                shortDesc: '切毛/圈毛两用，上手极快，地毯创作核心利器。',
+                price: '¥ 680.00',
+                images: [
+                    'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80'
+                ],
+                desc: `这款专业级簇绒枪支持切毛（Cut Pile）和圈毛（Loop Pile）自由切换。
+                
+                产品亮点：
+                - 重量轻巧，长时间操作不易手酸，对新手极其友好。
+                - 马达平稳，出毛流畅不易卡线。
+                - 附带完整新手调速指南，开箱即可创作你的第一幅地毯！`
+            },
+            {
+                id: 2,
+                category: 'tool',
+                title: 'Tufting 专用低噪音修毛推子',
+                shortDesc: '修剪表面浮毛必备，让你的地毯作品瞬间高级精致。',
+                price: '¥ 168.00',
+                images: [
+                    'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1512290900722-9a70fbee87d5?auto=format&fit=crop&w=800&q=80'
+                ],
+                desc: `地毯织完后表面不够平整？这款修毛推子就是你的最佳助手！
+                - 强劲动力配合精密刀头，轻松推平浮毛与不匀称绒面。
+                - 优化静音设计，握感舒适。`
+            },
+            {
+                id: 3,
+                category: 'design',
+                title: '定制商业插画 / 视觉海报设计',
+                shortDesc: '温馨可爱风手绘视觉，为你的品牌或活动吸睛加分。',
+                price: '¥ 199 起 / 张',
+                images: [
+                    'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80'
+                ],
+                desc: `厌倦了千篇一律的模板？我们承接各类海报、插画、社交媒体视觉以及品牌专属创意设计。
+                流程：通过 WhatsApp 沟通想法与参考风格 -> 确认草图与配色 -> 精心绘制并提供多轮修改。`
+            },
+            {
+                id: 4,
+                category: 'design',
+                title: '品牌视觉全案 & 创意周边设计',
+                shortDesc: '从 Logo 到包装、贴纸、毛绒周边一体化定制。',
+                price: '¥ 399 起',
+                images: [
+                    'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80'
+                ],
+                desc: `为你的小店或创意项目量身打造温馨、治愈、让人一眼记住的品牌调性。`
+            }
+        ];
+
+        let activeProduct = null;
+
+        // 渲染商品网格
+        function renderList(cat = 'all') {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+
+            const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.onclick = () => showDetail(item.id);
+                card.innerHTML = `
+                    <div class="product-img-box">
+                        <img src="${item.images[0]}" alt="${item.title}">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">${item.title}</div>
+                        <div class="product-desc">${item.shortDesc}</div>
+                        <div class="product-footer">
+                            <span class="product-price">${item.price}</span>
+                            <span class="detail-link-btn">查看详情 &gt;</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterCat(cat) {
+            goHome();
+            renderList(cat);
+            const titles = {
+                'all': '🌟 精选商品与定制服务',
+                'tool': '🔫 Tufting 簇绒工具专区',
+                'design': '🎨 海报与创意设计定制'
+            };
+            document.getElementById('list-heading').innerText = titles[cat] || '精选商品';
+        }
+
+        // 显示详情页
+        function showDetail(id) {
+            const prod = products.find(p => p.id === id);
+            if (!prod) return;
+            activeProduct = prod;
+
+            document.getElementById('det-title').innerText = prod.title;
+            document.getElementById('det-price').innerText = prod.price;
+            document.getElementById('det-desc').innerText = prod.desc;
+
+            const mainImg = document.getElementById('main-img');
+            const thumbsBox = document.getElementById('thumbs-container');
+            
+            mainImg.src = prod.images[0];
+            thumbsBox.innerHTML = '';
+
+            prod.images.forEach((img, idx) => {
+                const t = document.createElement('div');
+                t.className = `thumb ${idx === 0 ? 'active' : ''}`;
+                t.innerHTML = `<img src="${img}" alt="缩略图">`;
+                t.onclick = () => {
+                    mainImg.src = img;
+                    document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
+                    t.classList.add('active');
+                };
+                thumbsBox.appendChild(t);
+            });
+
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('detail-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goHome() {
+            document.getElementById('detail-view').classList.add('hidden');
+            document.getElementById('home-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 提交 WhatsApp 订单
+        function submitOrder(e) {
+            e.preventDefault();
+            if (!activeProduct) return;
+
+            const name = document.getElementById('cust-name').value;
+            const note = document.getElementById('cust-note').value;
+            const whatsappNumber = "你的WhatsApp号码"; // 填入你的号码
+
+            const text = `✨ 网站新咨询/订单 ✨%0A----------------%0A📦 商品：${activeProduct.title}%0A💰 价格：${activeProduct.price}%0A👤 客户：${name}%0A📝 需求/地址：${note}`;
+
+            window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+        }
+
+        window.onload = () => renderList('all');
+    </script>
+</body>
+</html>
