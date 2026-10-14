@@ -9,11 +9,11 @@ const copy = {
 };
 // Replace placeholder product photos with your own files. Paths are relative to the repository root.
 const PRODUCTS = [
- {id:"gun",category:0,image:"Assets/products/tufting-gun.jpg",price:850,name:{fr:"Tufting Gun",en:"Tufting Gun",ar:"مسدس التافتينغ"},desc:{fr:"Outil pour donner vie à vos créations tufting.",en:"A tool to bring your tufting creations to life.",ar:"أداة لتحويل أفكارك إلى أعمال تافتينغ."}},
- {id:"trimmer",category:1,image:"Assets/products/trimmer.jpg",price:180,name:{fr:"Tondeuse / Ciseaux",en:"Trimmer / Scissors",ar:"ماكينة تشذيب / مقص"},desc:{fr:"Pour des finitions propres et précises.",en:"For clean, precise finishing.",ar:"لإنهاء دقيق ونظيف."}},
- {id:"yarn",category:2,image:"Assets/products/yarn.jpg",price:60,name:{fr:"Fils & Accessoires",en:"Yarn & Accessories",ar:"خيوط وإكسسوارات"},desc:{fr:"Des couleurs pour toutes vos idées.",en:"Colours for all your ideas.",ar:"ألوان تناسب جميع أفكارك."}},
- {id:"poster",category:3,image:"Assets/products/poster.jpg",price:90,name:{fr:"Designs & Posters",en:"Designs & Posters",ar:"تصاميم وملصقات"},desc:{fr:"Des inspirations créatives à afficher.",en:"Creative inspiration to display.",ar:"إلهام إبداعي لتزيين مساحتك."}},
- {id:"custom",category:4,image:"Assets/products/custom-design.jpg",price:0,name:{fr:"Création sur mesure",en:"Custom creation",ar:"تصميم حسب الطلب"},desc:{fr:"Une création imaginée spécialement pour vous.",en:"A creation designed especially for you.",ar:"تصميم يُنفّذ خصيصًا لك."}}
+ {id:"gun",category:0,image:"Assets/tufting-gun.jpg",price:850,name:{fr:"Tufting Gun",en:"Tufting Gun",ar:"مسدس التافتينغ"},desc:{fr:"Outil pour donner vie à vos créations tufting.",en:"A tool to bring your tufting creations to life.",ar:"أداة لتحويل أفكارك إلى أعمال تافتينغ."}},
+ {id:"trimmer",category:1,image:"Assets/trimmer.jpg",price:180,name:{fr:"Tondeuse / Ciseaux",en:"Trimmer / Scissors",ar:"ماكينة تشذيب / مقص"},desc:{fr:"Pour des finitions propres et précises.",en:"For clean, precise finishing.",ar:"لإنهاء دقيق ونظيف."}},
+ {id:"yarn",category:2,image:"Assets/yarn.jpg",price:60,name:{fr:"Fils & Accessoires",en:"Yarn & Accessories",ar:"خيوط وإكسسوارات"},desc:{fr:"Des couleurs pour toutes vos idées.",en:"Colours for all your ideas.",ar:"ألوان تناسب جميع أفكارك."}},
+ {id:"poster",category:3,image:"Assets/poster.jpg",price:90,name:{fr:"Designs & Posters",en:"Designs & Posters",ar:"تصاميم وملصقات"},desc:{fr:"Des inspirations créatives à afficher.",en:"Creative inspiration to display.",ar:"إلهام إبداعي لتزيين مساحتك."}},
+ {id:"custom",category:4,image:"Assets/custom-design.jpg",price:0,name:{fr:"Création sur mesure",en:"Custom creation",ar:"تصميم حسب الطلب"},desc:{fr:"Une création imaginée spécialement pour vous.",en:"A creation designed especially for you.",ar:"تصميم يُنفّذ خصيصًا لك."}}
 ];
 const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
 const fmt=n=>`${Number(n).toLocaleString(lang==="fr"?"fr-FR":lang==="ar"?"ar-MA":"en-US")} DH`;
