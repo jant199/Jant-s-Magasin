@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf2">
+  <meta name="description" content="Tuft & Create — outils, fils et créations tufting.">
+  <title>Tuft & Create ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="site" id="site">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Tuft & Create home"><span class="brand-mark">t<span>♡</span></span><span class="brand-name">Tuft <i>&</i> Create</span></a>
+      <nav class="header-actions" aria-label="Main navigation">
+        <button class="icon-button language-button" data-action="language" aria-label="Change language" title="Change language"><span id="languageLabel">FR</span><span aria-hidden="true">⌄</span></button>
+        <button class="icon-button" data-action="search" data-i18n-aria="searchTitle" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg></button>
+        <button class="icon-button" data-action="account" data-i18n-aria="accountTitle" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-4 3.1-6 7-6s6.2 2 7 6"></path></svg></button>
+        <button class="icon-button cart-trigger" data-action="cart" data-i18n-aria="basket" aria-label="Open basket" title="Open basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg><span id="cartCount" class="cart-count">0</span></button>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">Le bonheur fait main</p>
+        <h1><span data-i18n="heroLine1">Create your own</span><br><span class="script-line" data-i18n="heroLine2">little universe ♡</span></h1>
+        <p class="hero-description" data-i18n="heroDescription">Outils de tufting, accessoires, fils et designs créatifs… Laissez parler votre imagination !</p>
+        <button class="primary hero-cta" data-action="whatsapp"><span data-i18n="heroCta">Écrivez-nous sur WhatsApp</span><span aria-hidden="true">↗</span></button>
+        <span class="hero-spark spark-one" aria-hidden="true">✳</span><span class="hero-spark spark-two" aria-hidden="true">♡</span>
+      </div>
+      <div class="hero-art" aria-label="Colorful handmade tufting inspiration" role="img">
+        <div class="art-sun"></div><div class="art-blob blob-blue"></div><div class="art-blob blob-pink"></div>
+        <div class="yarn-ball yarn-one"><span></span></div><div class="yarn-ball yarn-two"><span></span></div>
+        <div class="mini-rug"><span class="rug-face">☺</span><span class="rug-caption">made with love</span></div>
+        <span class="art-note note-one">soft things</span><span class="art-note note-two">♡ handmade ♡</span>
+      </div>
+      <div class="hero-bottom-note"><span class="dot"></span><span data-i18n="heroFootnote">Des idées douces, des créations uniques.</span></div>
+    </section>
+
+    <section class="categories section-block" aria-labelledby="categoriesTitle">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="categoryEyebrow">Tout pour créer</p><h2 id="categoriesTitle" data-i18n="categoryTitle">Explorez la boutique</h2></div><button class="text-link" data-action="shop"><span data-i18n="viewAll">Tout voir</span> <span aria-hidden="true">↗</span></button></div>
+      <div class="category-grid">
+        <button class="category-card cat-blue" data-category="0"><span class="category-art tool-gun" aria-hidden="true">✳</span><span class="category-label" data-i18n-category="0">Tufting Gun</span><span class="category-arrow" aria-hidden="true">↗</span></button>
+        <button class="category-card cat-pink" data-category="1"><span class="category-art tool-scissors" aria-hidden="true">✂</span><span class="category-label" data-i18n-category="1">Tondeuse / Ciseaux</span><span class="category-arrow" aria-hidden="true">↗</span></button>
+        <button class="category-card cat-yellow" data-category="2"><span class="category-art tool-yarn" aria-hidden="true">●</span><span class="category-label" data-i18n-category="2">Fils & Accessoires</span><span class="category-arrow" aria-hidden="true">↗</span></button>
+        <button class="category-card cat-lilac" data-category="3"><span class="category-art tool-poster" aria-hidden="true">▧</span><span class="category-label" data-i18n-category="3">Designs & Posters</span><span class="category-arrow" aria-hidden="true">↗</span></button>
+        <button class="category-card cat-green" data-category="4"><span class="category-art tool-custom" aria-hidden="true">✿</span><span class="category-label" data-i18n-category="4">Sur mesure</span><span class="category-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="feature-grid section-block" aria-label="Studio highlights">
+      <article class="feature-card feature-custom"><div class="feature-copy"><p class="eyebrow" data-i18n="customEyebrow">Une idée en tête ?</p><h2 data-i18n="customTitle">Créations sur mesure</h2><p data-i18n="customText">Racontons votre idée et transformons-la en une pièce unique.</p><button class="outline-button" data-action="custom"><span data-i18n="discover">Découvrir</span> ↗</button></div><div class="feature-doodle doodle-flower" aria-hidden="true">✿</div></article>
+      <article class="feature-card feature-projects"><div class="feature-copy"><p class="eyebrow" data-i18n="projectsEyebrow">Faits avec amour</p><h2 data-i18n="projectsTitle">Nos petits projets</h2><p data-i18n="projectsText">Des couleurs, des textures et beaucoup de créativité.</p><button class="outline-button" data-action="projects"><span data-i18n="seeProjects">Voir les projets</span> ↗</button></div><div class="feature-doodle doodle-heart" aria-hidden="true">♡</div></article>
+    </section>
+
+    <section class="promise-strip"><span>✳</span><p data-i18n="promise">Créez à votre rythme. Faites quelque chose qui vous ressemble.</p><span>♡</span></section>
+    <footer class="site-footer"><a class="footer-brand" href="#home">Tuft <i>&</i> Create ♡</a><p data-i18n="footerText">Un petit studio pour les grandes idées créatives.</p><button class="footer-contact" data-action="whatsapp" data-i18n="contactUs">Contactez-nous</button><small>© <span id="year"></span> Tuft & Create</small></footer>
+  </main>
+
+  <dialog id="shopDialog" class="dialog shop-dialog"><div class="dialog-head"><div><p class="eyebrow" data-i18n="eyebrow">La petite boutique</p><h2 id="dialogTitle">Boutique</h2></div><button class="close" data-close="shopDialog" data-i18n-aria="close" aria-label="Close">×</button></div><div id="productGrid" class="product-grid"></div></dialog>
+  <dialog id="detailDialog" class="dialog detail-dialog"><button class="close floating-close" data-close="detailDialog" data-i18n-aria="close" aria-label="Close">×</button><div id="detailContent" class="detail-content"></div></dialog>
+  <dialog id="cartDialog" class="dialog cart-dialog"><div class="dialog-head"><div><p class="eyebrow" data-i18n="yourOrder">Votre commande</p><h2 data-i18n="basket">Panier</h2></div><button class="close" data-close="cartDialog" data-i18n-aria="close" aria-label="Close">×</button></div><div id="cartItems"></div><div class="cart-total"><span data-i18n="estimatedTotal">Total estimé</span><strong id="cartTotal">0 DH</strong></div><button id="checkout" class="primary" data-i18n="checkout">Commander via WhatsApp</button><p class="small-note" data-i18n="checkoutNote">La commande sera envoyée dans WhatsApp pour confirmation.</p></dialog>
+  <dialog id="searchDialog" class="dialog small-dialog"><button class="close floating-close" data-close="searchDialog" data-i18n-aria="close" aria-label="Close">×</button><h2 data-i18n="searchTitle">Chercher dans la boutique</h2><input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Ex. laine, tufting gun…"><button id="searchSubmit" class="primary" data-i18n="searchButton">Rechercher</button></dialog>
+  <dialog id="infoDialog" class="dialog small-dialog"><button class="close floating-close" data-close="infoDialog" data-i18n-aria="close" aria-label="Close">×</button><h2 id="infoTitle">Tuft & Create</h2><p id="infoText"></p><button class="primary" data-close="infoDialog" data-i18n="close">Fermer</button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
