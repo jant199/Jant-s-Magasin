@@ -1,5 +1,5 @@
 /* Tuft & Create storefront. Edit WHATSAPP_NUMBER and PRODUCTS below to customize. */
-const WHATSAPP_NUMBER = "212600000000"; // Replace with your real WhatsApp number, digits only, including country code.
+const WHATSAPP_NUMBER = "212641044640"; // Replace with your real WhatsApp number, digits only, including country code.
 const CURRENCY = "DH";
 const PRODUCTS = [
   {id:"gun", category:"tools", price:1800, emoji:"🔫", image:"assets/products/tufting-gun.jpg", badgeKey:"badgePopular", name:{fr:"Pistolet à tufter",en:"Tufting gun",ar:"مسدس التافتينغ"}, description:{fr:"Un outil pratique pour donner vie à tes tapis et projets tuftés. Écris-nous pour confirmer le modèle et la disponibilité.",en:"A practical tool for bringing rugs and tufting projects to life. Message us to confirm model and availability.",ar:"أداة عملية لصنع السجاد ومشاريع التافتينغ. راسلينا لتأكيد الطراز والتوفر."}},
