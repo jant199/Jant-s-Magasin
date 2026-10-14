@@ -1,5 +1,5 @@
 /* Tuft & Create — editable content and interactions. Update products and WhatsApp number here. */
-const WHATSAPP_NUMBER = "212600000000"; // Replace with your real number, digits only.
+const WHATSAPP_NUMBER = "212641044640"; // Replace with your real number, digits only.
 const LANGS = ["fr", "en", "ar"];
 let lang = "fr";
 const copy = {
