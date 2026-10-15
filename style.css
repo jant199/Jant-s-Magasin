@@ -50,3 +50,33 @@ main{padding-bottom:0}
 .hero .sticker-cake{left:48px;right:auto;top:auto;bottom:10%;width:55px;height:55px}
 @media(max-width:1100px){.hero{height:390px;min-height:390px}.hero-art{height:360px}.site-footer{padding-left:3%;padding-right:3%}}
 @media(max-width:720px){html,body{min-height:100%;background-size:125px 108px,90px 100px,135px 130px,155px 125px,100% 100%,100% 100%}.site-header{min-height:0}.hero{height:auto;min-height:0;padding:24px 0 8px;grid-template-columns:1fr}.hero-art{height:auto;aspect-ratio:2.08}.hero .sticker-tulip{left:-7px;top:6%;width:36px;height:58px}.hero .sticker-cake{left:10px;bottom:12%;width:42px;height:42px}.categories{min-height:0;padding-top:10px;padding-bottom:20px}.category img{height:auto;max-height:none;aspect-ratio:1.56}.category span{white-space:normal;min-height:32px}.promos{padding-bottom:14px}.site-footer{min-height:0;margin:0 auto;padding:12px 3% 26px}}
+
+/* Screenshot corrections: open the hero edge, protect copy, and end the page cleanly */
+html,body{background-color:#fffaf2!important;min-height:100%;}
+body{min-height:100vh;min-height:100svh;position:relative;overflow-x:hidden;background-size:135px 118px,100px 88px,150px 128px,170px 132px,100% 100%,100% 100%;}
+body:before,body:after{content:"";position:absolute;top:0;bottom:0;z-index:0;width:13px;height:auto;opacity:.6;pointer-events:none;transform:none;border:0;border-radius:0;background:repeating-linear-gradient(45deg,#d8eff7 0 5px,#fffaf2 5px 10px,#f9d4d6 10px 14px,#fffaf2 14px 20px);}
+body:before{left:0;right:auto}.body:after{right:0;left:auto}
+.site-header,main,.site-footer{position:relative;z-index:1}
+.site-header{padding-right:5.5%;padding-left:5.5%;}
+.header-actions{gap:clamp(8px,1vw,15px);margin-right:8px}
+.hero{height:408px;min-height:408px;overflow:visible;}
+.hero-art{height:398px;border-radius:0;clip-path:polygon(9% 2%,24% 0,100% 0,100% 100%,0 100%,0 48%,3% 28%);}
+.hero-art:after{inset:0;border-radius:0;clip-path:inherit;border-bottom:2px dashed #e9b99d;}
+.hero-copy{padding-left:8%;padding-right:1%;}
+.hero h1{font-size:clamp(59px,5.25vw,74px);line-height:.84;max-width:510px;letter-spacing:0;margin-bottom:18px;}
+.hero-description{font-size:clamp(18px,1.48vw,21px);line-height:1.18;max-width:400px;margin-bottom:18px;}
+.hero .sticker-tulip{left:-25px;top:25%;width:38px;height:65px;transform:rotate(-8deg)}
+.hero .sticker-cake{left:-22px;right:auto;top:auto;bottom:19%;width:42px;height:42px;transform:rotate(5deg)}
+.categories{min-height:195px;padding-top:2px;padding-bottom:14px;}
+.category img{width:min(205px,100%);height:124px;max-height:124px;object-fit:contain;}
+.promos{gap:16px;padding-bottom:8px;}
+.promo-card{min-height:214px;padding:20px 21px;border-radius:27px 23px 27px 20px;}
+.promo-copy{width:66%;max-width:66%;}
+.promo-card h2{width:145%;max-width:none;white-space:nowrap;font-size:clamp(28px,2.45vw,36px);line-height:1;margin:0 0 9px;}
+.promo-card p{max-width:230px;width:100%;font-size:clamp(16px,1.22vw,18px);line-height:1.05;min-height:44px;margin:0 0 8px;}
+.promo-card>img{right:0;bottom:4px;width:42%;height:60%;object-fit:contain;object-position:right bottom;}
+.promo-custom>img{right:3px;width:39%;height:62%;}
+.promo-projects>img{right:0;width:42%;height:62%;}
+.site-footer{width:100%;max-width:1280px;min-height:78px;margin:0 auto;padding:10px 5% 20px;background:transparent;}
+@media(max-width:1100px){.hero{height:390px;min-height:390px}.hero-art{height:360px}.promo-copy{width:67%;max-width:67%}.promo-card h2{font-size:clamp(26px,3vw,34px)}}
+@media(max-width:720px){body:before,body:after{width:7px;opacity:.35}.site-header{padding-left:4%;padding-right:4%}.hero{height:auto;min-height:0;overflow:visible}.hero-art{height:auto;clip-path:polygon(8% 2%,25% 0,100% 0,100% 100%,0 100%,0 45%,3% 25%)}.hero .sticker-tulip{left:-7px;top:4%;width:30px;height:52px}.hero .sticker-cake{left:-7px;bottom:11%;width:34px;height:34px}.promo-copy{width:65%;max-width:65%}.promo-card h2{width:150%;font-size:clamp(27px,8vw,34px)}.promo-card p{max-width:210px}.promo-card>img{width:39%;height:57%}.site-footer{width:100%}}
