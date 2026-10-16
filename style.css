@@ -195,3 +195,7 @@ body:after{display:none!important}
 .site-header,main,.site-footer{position:relative;z-index:1}
 .site-header{z-index:40;background:rgba(255,250,242,.76);backdrop-filter:blur(1px)}
 @media(max-width:720px){body:before{background-size:100% 100%;opacity:.88}}
+
+/* Let the transparent appliqué frame show around, not through, the page content */
+body:before{position:absolute;background-size:100% 100%;background-position:center;opacity:1;z-index:0}
+.site-header{background:transparent;backdrop-filter:none}
