@@ -259,3 +259,10 @@ body:after{display:block!important;content:"";position:absolute;inset:8px;top:8p
 .site-header{position:relative;z-index:40!important;background:rgba(255,250,242,.96)!important}
 main,.site-footer{position:relative;z-index:2!important}
 @media(max-width:720px){body:before{border-width:38px;border-image-width:38px}body:after{inset:5px}.site-header,.site-footer{background:rgba(255,250,242,.985)!important}}
+
+
+/* Decorative perimeter always sits behind interactive content and lettering. */
+body{isolation:isolate}
+body:before,body:after{z-index:-1!important}
+.site-header{z-index:40!important}
+main,.site-footer{position:relative;z-index:2!important}
