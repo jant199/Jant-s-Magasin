@@ -203,3 +203,9 @@ body:before{position:absolute;background-size:100% 100%;background-position:cent
 body:before{z-index:2;opacity:1}
 
 body:before{z-index:999!important}.site-header{z-index:1000!important}
+
+/* Render the approved transparent border as a real decorative layer */
+body:before{display:none!important}
+.site-patchwork-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:2;pointer-events:none;user-select:none}
+.site-header{position:relative;z-index:40!important;background:transparent!important;backdrop-filter:none!important}
+main,.site-footer{position:relative;z-index:1!important}
