@@ -266,3 +266,13 @@ body{isolation:isolate}
 body:before,body:after{z-index:-1!important}
 .site-header{z-index:40!important}
 main,.site-footer{position:relative;z-index:2!important}
+
+
+/* Clean perimeter: use only the outer cloth band, with no duplicate stitch line. */
+body{isolation:isolate;background-color:#fffaf2}
+body:before{display:block!important;content:"";position:absolute;inset:0;top:0;right:0;bottom:0;left:0;width:auto;height:auto;transform:none;z-index:0;pointer-events:none;background:none;border:solid transparent;border-width:clamp(44px,5vw,68px);border-image-source:url("Assets/ui-parts/patchwork-frame.png");border-image-slice:220;border-image-width:clamp(44px,5vw,68px);border-image-repeat:round;border-radius:0;opacity:1}
+body:after{display:none!important}
+.site-header{position:relative;z-index:40!important;background:transparent!important;border-bottom:0!important}
+main,.site-footer{position:relative;z-index:2!important}
+.site-footer{background:rgba(255,250,242,.97)}
+@media(max-width:720px){body:before{border-width:38px;border-image-width:38px}.site-header,.site-footer{background:transparent!important}}
