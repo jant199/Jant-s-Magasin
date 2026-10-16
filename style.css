@@ -254,8 +254,8 @@ main,.site-footer{position:relative;z-index:2!important}
 /* Stable, inset patchwork border; keep all decoration below page text. */
 body{isolation:isolate;background-image:radial-gradient(ellipse at 12% 15%,#fffdf8 0,transparent 40%),radial-gradient(ellipse at 90% 95%,#fff4ea 0,transparent 30%);background-repeat:no-repeat;background-position:center,center;background-size:100% 100%,100% 100%}
 .site-patchwork-frame{display:none!important}
-body:before{display:block!important;content:"";position:absolute;inset:0;z-index:0;pointer-events:none;border:solid transparent;border-width:clamp(44px,5vw,68px);border-image-source:url("Assets/ui-parts/patchwork-frame.png");border-image-slice:150 fill;border-image-width:clamp(44px,5vw,68px);border-image-repeat:round;opacity:1}
-body:after{display:block!important;content:"";position:absolute;inset:8px;z-index:1;pointer-events:none;border:2px dashed #cf806f;background:none;border-radius:10px}
+body:before{display:block!important;content:"";position:absolute;inset:0;top:0;right:0;bottom:0;left:0;width:auto;height:auto;transform:none;z-index:0;pointer-events:none;background:none;border:solid transparent;border-width:clamp(44px,5vw,68px);border-image-source:url("Assets/ui-parts/patchwork-frame.png");border-image-slice:150 fill;border-image-width:clamp(44px,5vw,68px);border-image-repeat:round;border-radius:0;opacity:1}
+body:after{display:block!important;content:"";position:absolute;inset:8px;top:8px;right:8px;bottom:8px;left:8px;width:auto;height:auto;transform:none;z-index:1;pointer-events:none;border:2px dashed #cf806f;background:none;border-radius:10px;opacity:1}
 .site-header{position:relative;z-index:40!important;background:rgba(255,250,242,.96)!important}
 main,.site-footer{position:relative;z-index:2!important}
 @media(max-width:720px){body:before{border-width:38px;border-image-width:38px}body:after{inset:5px}.site-header,.site-footer{background:rgba(255,250,242,.985)!important}}
