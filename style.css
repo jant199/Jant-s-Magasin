@@ -239,3 +239,13 @@ main,.site-footer{position:relative;z-index:2!important}
  .site-header{background:rgba(255,250,242,.98)!important}
  .site-footer{background:rgba(255,250,242,.98)}
 }
+
+
+/* Keep patchwork border motifs at a fixed scale along the full page edge. */
+body{isolation:isolate;background-image:radial-gradient(ellipse at 12% 15%,#fffdf8 0,transparent 40%),radial-gradient(ellipse at 90% 95%,#fff4ea 0,transparent 30%);background-repeat:no-repeat;background-position:center,center;background-size:100% 100%,100% 100%}
+.site-patchwork-frame{display:none!important}
+body:before{display:block!important;content:"";position:absolute;inset:0;z-index:0;pointer-events:none;border:solid transparent;border-width:clamp(54px,7vw,96px);border-image-source:url("Assets/ui-parts/patchwork-frame.png");border-image-slice:220 fill;border-image-width:clamp(54px,7vw,96px);border-image-repeat:round;opacity:1}
+body:after{display:block!important;content:"";position:absolute;inset:8px;z-index:1;pointer-events:none;border:2px dashed #d99180;background:none;border-radius:12px}
+.site-header{z-index:40!important;background:rgba(255,250,242,.96)!important}
+main,.site-footer{position:relative;z-index:2!important}
+@media(max-width:720px){body:before{border-width:48px;border-image-width:48px}body:after{inset:5px;border-width:2px}.site-header{background:rgba(255,250,242,.985)!important}}
