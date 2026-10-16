@@ -199,3 +199,5 @@ body:after{display:none!important}
 /* Let the transparent appliqué frame show around, not through, the page content */
 body:before{position:absolute;background-size:100% 100%;background-position:center;opacity:1;z-index:0}
 .site-header{background:transparent;backdrop-filter:none}
+
+body:before{z-index:2;opacity:1}
