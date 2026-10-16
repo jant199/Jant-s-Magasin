@@ -223,3 +223,19 @@ main,.site-footer{position:relative;z-index:1!important}
 .site-footer{background:rgba(255,250,242,.9);border-radius:18px}
 body:after{display:block!important;content:"";position:absolute;inset:8px;border:2px dashed #e8b8aa;background:none;z-index:0;pointer-events:none}
 @media(max-width:720px){.site-patchwork-frame{transform:scale(.82)}.site-footer{background:rgba(255,250,242,.94)}}
+
+
+/* Confine patchwork art to a stitched perimeter so it never crosses text or footer icons. */
+body{isolation:isolate;background-color:#fffaf2}
+.site-patchwork-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;transform:none;opacity:.9;z-index:0!important;pointer-events:none;user-select:none}
+body:before{display:block!important;content:"";position:absolute;inset:clamp(48px,5vw,72px);z-index:1;pointer-events:none;background:rgba(255,250,242,.985);border:1px solid rgba(232,184,170,.45);border-radius:clamp(18px,2.2vw,32px)}
+body:after{display:block!important;content:"";position:absolute;inset:8px;z-index:1;pointer-events:none;border:2px dashed #e8b8aa;background:none;border-radius:12px}
+.site-header{position:relative;z-index:40!important;isolation:isolate;background:rgba(255,250,242,.96)!important;backdrop-filter:none!important}
+main,.site-footer{position:relative;z-index:2!important}
+.site-footer{background:rgba(255,250,242,.96);border-radius:18px}
+@media(max-width:720px){
+ body:before{inset:42px 38px;border-radius:18px}
+ body:after{inset:5px}
+ .site-header{background:rgba(255,250,242,.98)!important}
+ .site-footer{background:rgba(255,250,242,.98)}
+}
