@@ -279,16 +279,18 @@ main,.site-footer{position:relative;z-index:2!important}
 
 
 
-/* Promo cards: proportions, type and copy placement follow the supplied reference. */
+
+/* Reference-led card finish and page doodles. */
 .promos{align-items:stretch;gap:clamp(14px,1.15vw,22px);padding:3px 0 18px}
 .promo-card{
-  aspect-ratio:2.22;
-  min-height:0;
+  aspect-ratio:2.2;min-height:0;
   padding:clamp(22px,2.2vw,34px) clamp(22px,3.1vw,46px);
   border:2px dashed #a7ddf2;
-  border-radius:30px 24px 34px 26px;
-  box-shadow:none;
-  background-image:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,0))!important;
+  border-radius:31px 25px 34px 26px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);
+  background-image:
+    radial-gradient(ellipse at 18% 12%,rgba(255,255,255,.5),transparent 55%),
+    radial-gradient(ellipse at 88% 92%,rgba(255,255,255,.24),transparent 48%)!important;
   isolation:isolate;
 }
 .promo-shop,.promo-projects{background-color:#dff3fb}
@@ -307,42 +309,58 @@ main,.site-footer{position:relative;z-index:2!important}
   letter-spacing:.005em;margin:0 0 10px;color:#087fbd;
 }
 .promo-card .primary{
-  padding:9px 19px;
-  border-radius:999px;
+  padding:9px 19px;border-radius:999px;
   font:700 clamp(16px,1.12vw,19px)/1.2 'Comic Neue','Noto Sans Arabic',sans-serif;
   letter-spacing:.01em;box-shadow:0 3px 0 #e4aebc;
 }
 .promo-card .primary.blue{box-shadow:0 3px 0 #9ccfe4}
-.promo-card>img{
-  right:-2px;bottom:2px;width:49%;height:88%;
-  object-fit:contain;object-position:right bottom;mix-blend-mode:multiply;
-  opacity:.98;z-index:1;
-}
+.promo-card>img{right:-2px;bottom:2px;width:49%;height:88%;object-fit:contain;object-position:right bottom;mix-blend-mode:multiply;opacity:.98;z-index:1}
 .promo-custom>img{right:0;width:47%;height:88%}
 .promo-projects>img{right:-1px;width:49%;height:90%}
 html[dir=rtl] .promo-card>img{right:auto;left:-2px}
 html[dir=rtl] .promo-copy{margin-inline-start:auto}
+.page-doodles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.doodle-icon{position:absolute;display:block;width:clamp(21px,2.2vw,34px);height:clamp(26px,2.8vw,42px);opacity:.78;filter:drop-shadow(0 1px 0 rgba(255,255,255,.8))}
+.doodle-icon svg{display:block;width:100%;height:100%;overflow:visible}
+.doodle-star{width:clamp(17px,1.5vw,24px);height:auto;aspect-ratio:1}
+.doodle-tulip{width:clamp(24px,2vw,31px);height:clamp(36px,3vw,47px)}
+.doodle-cupcake{width:clamp(24px,2.1vw,34px);height:auto;aspect-ratio:1}
+.doodle-star svg{fill:#ffd47c;stroke:#eda84d;stroke-width:1.8;stroke-linejoin:round}
+.doodle-tulip svg,.doodle-cupcake svg{fill:none;stroke:#45627a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.doodle-tulip .petal{fill:#ff7298}
+.doodle-tulip .leaf{fill:#9bcba7}
+.doodle-cupcake .icing{fill:#fff2dc}
+.doodle-cupcake .wrapper{fill:#ffcbd9;stroke:#e9829d}
+.doodle-cupcake .liner{stroke:#ef819a}
+.doodle-cupcake .cherry{fill:#ff688d;stroke:#e94e77}
+.doodle-cupcake .flame{fill:#ffd36f;stroke:#eea43f}
+.doodle-star.s1{left:2.2%;top:12%}.doodle-star.s2{right:2.3%;top:24%}.doodle-star.s3{left:3.2%;top:47%}.doodle-star.s4{right:2.8%;top:70%}.doodle-star.s5{left:6%;top:88%}
+.doodle-tulip.t1{left:1%;top:31%;transform:rotate(-9deg)}.doodle-tulip.t2{right:1%;top:51%;transform:rotate(8deg)}.doodle-tulip.t3{left:2%;top:75%;transform:rotate(-6deg)}
+.doodle-cupcake.c1{right:2%;top:38%;transform:rotate(7deg)}.doodle-cupcake.c2{left:1.5%;top:62%;transform:rotate(-7deg)}.doodle-cupcake.c3{right:4%;top:85%;transform:rotate(6deg)}
 @media(max-width:1100px){
-  .promo-card{aspect-ratio:2.05;padding:20px 22px}
-  .promo-copy{width:62%;max-width:62%}
-  .promo-card h2{font-size:clamp(29px,3.2vw,37px)}
-  .promo-card p{font-size:clamp(16px,1.55vw,19px)}
+ .promo-card{aspect-ratio:2.05;padding:20px 22px}
+ .promo-copy{width:62%;max-width:62%}
+ .promo-card h2{font-size:clamp(29px,3.2vw,37px)}
+ .promo-card p{font-size:clamp(16px,1.55vw,19px)}
 }
 @media(max-width:720px){
-  .promos{grid-template-columns:1fr;gap:14px;padding:3px 0 18px}
-  .promo-card{aspect-ratio:auto;min-height:190px;padding:21px 23px;border-radius:26px 22px 29px 24px}
-  .promo-copy{width:62%;max-width:62%}
-  .promo-card h2{width:158%;font-size:clamp(30px,8vw,38px);line-height:1.04}
-  .promo-card p{max-width:245px;min-height:43px;font-size:18px}
-  .promo-card .primary{font-size:18px;padding:9px 18px}
-  .promo-card>img{width:43%;height:83%;right:-2px}
-  .promo-custom>img{width:42%}
-  .promo-projects>img{width:44%}
-  html[dir=rtl] .promo-card>img{right:auto;left:-2px}
+ .promos{grid-template-columns:1fr;gap:14px;padding:3px 0 18px}
+ .promo-card{aspect-ratio:auto;min-height:190px;padding:21px 23px;border-radius:26px 22px 29px 24px}
+ .promo-copy{width:62%;max-width:62%}
+ .promo-card h2{width:158%;font-size:clamp(30px,8vw,38px);line-height:1.04}
+ .promo-card p{max-width:245px;min-height:43px;font-size:18px}
+ .promo-card .primary{font-size:18px;padding:9px 18px}
+ .promo-card>img{width:43%;height:83%;right:-2px}
+ .promo-custom>img{width:42%}.promo-projects>img{width:44%}
+ .doodle-icon{opacity:.46;width:21px;height:29px}
+ .doodle-star{width:16px;height:16px}.doodle-tulip{width:20px;height:31px}.doodle-cupcake{width:21px;height:21px}
+ .doodle-icon.s1{left:-5px;top:17%}.doodle-icon.s2{right:-5px;top:30%}.doodle-icon.s3{left:-6px;top:46%}.doodle-icon.s4{right:-6px;top:62%}
+ .doodle-icon.t1{left:-9px;top:35%}.doodle-icon.t2{right:-9px;top:54%}.doodle-icon.t3{left:-9px;top:78%}
+ .doodle-icon.c1{right:-8px;top:41%}.doodle-icon.c2{left:-8px;top:68%}.doodle-icon.c3{right:-8px;top:88%}
 }
 @media(max-width:390px){
-  .promo-card{min-height:184px;padding:19px 18px}
-  .promo-copy{width:63%;max-width:63%}
-  .promo-card h2{font-size:30px}
-  .promo-card p{font-size:17px}
+ .promo-card{min-height:184px;padding:19px 18px}
+ .promo-copy{width:63%;max-width:63%}
+ .promo-card h2{font-size:30px}
+ .promo-card p{font-size:17px}
 }
