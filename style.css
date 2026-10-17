@@ -278,62 +278,63 @@ main,.site-footer{position:relative;z-index:2!important}
 @media(max-width:720px){body:before{border-width:38px;border-image-width:38px}.site-header,.site-footer{background:transparent!important}}
 
 
-/* Reference-matched promo cards: handwritten type, clean appliqué edges, balanced copy/art. */
-.promos{align-items:stretch;gap:clamp(14px,1.2vw,22px);padding:4px 0 18px}
+
+/* Promo cards: proportions, type and copy placement follow the supplied reference. */
+.promos{align-items:stretch;gap:clamp(14px,1.15vw,22px);padding:3px 0 18px}
 .promo-card{
-  min-height:228px;
-  padding:26px 28px;
-  border:2px dashed #a8dff4;
-  border-radius:30px 24px 32px 26px;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
-  background-image:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,0))!important;
+  aspect-ratio:2.22;
+  min-height:0;
+  padding:clamp(22px,2.2vw,34px) clamp(22px,3.1vw,46px);
+  border:2px dashed #a7ddf2;
+  border-radius:30px 24px 34px 26px;
+  box-shadow:none;
+  background-image:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,0))!important;
   isolation:isolate;
 }
 .promo-shop,.promo-projects{background-color:#dff3fb}
-.promo-custom{background-color:#ffeaee;border-color:#f4c1cc}
+.promo-custom{background-color:#ffeaee;border-color:#f3bdc9}
 .promo-card:before{display:none!important}
-.promo-copy{width:58%;max-width:58%;position:relative;z-index:2}
+.promo-copy{width:62%;max-width:62%;position:relative;z-index:2}
 .promo-card h2{
-  width:100%;max-width:100%;white-space:normal;overflow-wrap:normal;
-  font:700 clamp(30px,2.55vw,39px)/1.02 'Caveat','Noto Sans Arabic',cursive;
-  letter-spacing:.01em;margin:0 0 10px;color:#078fd0;
+  width:158%;max-width:none;white-space:nowrap;
+  font:700 clamp(31px,2.65vw,43px)/1.04 'Comic Neue','Noto Sans Arabic',sans-serif;
+  letter-spacing:.005em;margin:0 0 8px;color:#078fd0;
 }
 .promo-custom h2{color:#f4467b}
 .promo-card p{
-  width:100%;max-width:260px;min-height:50px;
-  font:600 clamp(18px,1.45vw,22px)/1.12 'Caveat','Noto Sans Arabic',cursive;
-  letter-spacing:.01em;margin:0 0 12px;color:#087fbd;
+  width:100%;max-width:255px;min-height:44px;
+  font:700 clamp(17px,1.2vw,20px)/1.18 'Comic Neue','Noto Sans Arabic',sans-serif;
+  letter-spacing:.005em;margin:0 0 10px;color:#087fbd;
 }
 .promo-card .primary{
-  padding:10px 21px;
-  border-radius:42% 48% 45% 50% / 55% 42% 58% 45%;
-  font:700 clamp(17px,1.28vw,20px)/1.15 'Caveat','Noto Sans Arabic',cursive;
-  letter-spacing:.02em;
-  box-shadow:0 3px 0 #e4aebc;
+  padding:9px 19px;
+  border-radius:999px;
+  font:700 clamp(16px,1.12vw,19px)/1.2 'Comic Neue','Noto Sans Arabic',sans-serif;
+  letter-spacing:.01em;box-shadow:0 3px 0 #e4aebc;
 }
 .promo-card .primary.blue{box-shadow:0 3px 0 #9ccfe4}
 .promo-card>img{
-  right:-3px;bottom:2px;width:49%;height:88%;
+  right:-2px;bottom:2px;width:49%;height:88%;
   object-fit:contain;object-position:right bottom;mix-blend-mode:multiply;
   opacity:.98;z-index:1;
 }
 .promo-custom>img{right:0;width:47%;height:88%}
 .promo-projects>img{right:-1px;width:49%;height:90%}
-html[dir=rtl] .promo-card>img{right:auto;left:-3px}
+html[dir=rtl] .promo-card>img{right:auto;left:-2px}
 html[dir=rtl] .promo-copy{margin-inline-start:auto}
 @media(max-width:1100px){
-  .promo-card{min-height:215px;padding:22px 21px}
-  .promo-copy{width:59%;max-width:59%}
-  .promo-card h2{font-size:clamp(29px,3.2vw,36px)}
-  .promo-card p{font-size:clamp(18px,1.7vw,20px)}
+  .promo-card{aspect-ratio:2.05;padding:20px 22px}
+  .promo-copy{width:62%;max-width:62%}
+  .promo-card h2{font-size:clamp(29px,3.2vw,37px)}
+  .promo-card p{font-size:clamp(16px,1.55vw,19px)}
 }
 @media(max-width:720px){
-  .promos{grid-template-columns:1fr;gap:14px;padding:4px 0 18px}
-  .promo-card{min-height:190px;padding:22px 23px;border-radius:26px 22px 29px 24px}
-  .promo-copy{width:61%;max-width:61%}
-  .promo-card h2{font-size:clamp(30px,8vw,37px);line-height:1.02}
-  .promo-card p{max-width:245px;min-height:44px;font-size:20px}
-  .promo-card .primary{font-size:19px;padding:9px 18px}
+  .promos{grid-template-columns:1fr;gap:14px;padding:3px 0 18px}
+  .promo-card{aspect-ratio:auto;min-height:190px;padding:21px 23px;border-radius:26px 22px 29px 24px}
+  .promo-copy{width:62%;max-width:62%}
+  .promo-card h2{width:158%;font-size:clamp(30px,8vw,38px);line-height:1.04}
+  .promo-card p{max-width:245px;min-height:43px;font-size:18px}
+  .promo-card .primary{font-size:18px;padding:9px 18px}
   .promo-card>img{width:43%;height:83%;right:-2px}
   .promo-custom>img{width:42%}
   .promo-projects>img{width:44%}
@@ -343,5 +344,5 @@ html[dir=rtl] .promo-copy{margin-inline-start:auto}
   .promo-card{min-height:184px;padding:19px 18px}
   .promo-copy{width:63%;max-width:63%}
   .promo-card h2{font-size:30px}
-  .promo-card p{font-size:18px}
+  .promo-card p{font-size:17px}
 }
