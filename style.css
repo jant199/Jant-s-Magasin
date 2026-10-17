@@ -364,3 +364,12 @@ html[dir=rtl] .promo-copy{margin-inline-start:auto}
  .promo-card h2{font-size:30px}
  .promo-card p{font-size:17px}
 }
+
+/* Color the decorative SVG symbol paths themselves; symbols live in the hidden defs tree. */
+#doodle-tulip-shape .petal{fill:#ff7298}
+#doodle-tulip-shape .leaf{fill:#9bcba7}
+#doodle-cupcake-shape .icing{fill:#fff2dc}
+#doodle-cupcake-shape .wrapper{fill:#ffcbd9;stroke:#e9829d}
+#doodle-cupcake-shape .liner{stroke:#ef819a}
+#doodle-cupcake-shape .cherry{fill:#ff688d;stroke:#e94e77}
+#doodle-cupcake-shape .flame{fill:#ffd36f;stroke:#eea43f}
