@@ -373,3 +373,52 @@ html[dir=rtl] .promo-copy{margin-inline-start:auto}
 #doodle-cupcake-shape .liner{stroke:#ef819a}
 #doodle-cupcake-shape .cherry{fill:#ff688d;stroke:#e94e77}
 #doodle-cupcake-shape .flame{fill:#ffd36f;stroke:#eea43f}
+
+/* High-contrast reference pass: more visible hand lettering, soft textile wash and ornaments. */
+.doodle-defs{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important}
+.promo-card{
+  background-image:
+    radial-gradient(ellipse at 16% 16%,rgba(255,255,255,.42),transparent 50%),
+    radial-gradient(ellipse at 82% 84%,rgba(255,255,255,.32),transparent 46%),
+    linear-gradient(135deg,rgba(255,255,255,.16),transparent 55%)!important;
+  border-style:dashed;
+  border-width:2px;
+  border-color:#9bdcf5;
+  border-radius:34px 28px 36px 26px / 17px 22px 20px 25px;
+}
+.promo-custom{border-color:#f3b4c2}
+.promo-card h2{
+  font-family:'Kalam','Comic Neue','Noto Sans Arabic',sans-serif!important;
+  font-size:clamp(32px,2.8vw,46px);
+  line-height:1.08;
+  letter-spacing:0;
+  text-shadow:.3px .5px rgba(7,143,208,.12);
+}
+.promo-custom h2{text-shadow:.3px .5px rgba(244,70,123,.12)}
+.promo-card p{
+  font-family:'Kalam','Comic Neue','Noto Sans Arabic',sans-serif!important;
+  font-size:clamp(18px,1.35vw,22px);
+  line-height:1.18;
+}
+.promo-card .primary{
+  font-family:'Kalam','Comic Neue','Noto Sans Arabic',sans-serif!important;
+  font-size:clamp(17px,1.18vw,20px);
+  padding:9px 21px;
+  border-radius:999px 999px 940px 920px;
+}
+.promo-card>img{width:52%;height:91%;right:-3px;bottom:0}
+.promo-custom>img{width:50%;height:91%}
+.promo-projects>img{width:52%;height:93%}
+.doodle-icon{opacity:.92;width:clamp(25px,2.4vw,40px);height:clamp(31px,3.1vw,48px)}
+.doodle-star{width:clamp(20px,1.8vw,30px);height:auto}
+.doodle-tulip{width:clamp(30px,2.4vw,40px);height:clamp(45px,3.5vw,58px)}
+.doodle-cupcake{width:clamp(29px,2.5vw,42px);height:auto}
+@media(max-width:720px){
+ .promo-card h2{font-size:clamp(32px,8.5vw,40px)}
+ .promo-card p{font-size:19px}
+ .promo-card>img{width:45%;height:86%}
+ .promo-custom>img{width:43%}
+ .promo-projects>img{width:46%}
+ .doodle-icon{opacity:.56}
+ .doodle-star{width:19px}.doodle-tulip{width:22px;height:34px}.doodle-cupcake{width:23px}
+}
