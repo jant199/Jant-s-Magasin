@@ -529,3 +529,22 @@ html[dir=rtl] .promos .promo-card>img{right:auto;left:0;object-position:left bot
  .promos .promo-card p{max-width:230px;font-size:17px}
  .promos .promo-card>img{width:42%;height:83%}
 }
+
+
+/* Hotfix: override the earlier French-only screenshot rule and force all cards visible. */
+html[lang=fr] .promos>.promo-card,
+html[lang=en] .promos>.promo-card,
+html[lang=ar] .promos>.promo-card{display:flex!important;visibility:visible!important;opacity:1!important}
+html[lang=fr] .promos,
+html[lang=en] .promos,
+html[lang=ar] .promos{
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ width:100%!important;margin:0!important;aspect-ratio:auto!important;
+ background:none!important;overflow:visible!important;
+ -webkit-mask-image:none!important;mask-image:none!important;
+}
+@media(max-width:720px){
+ html[lang=fr] .promos,
+ html[lang=en] .promos,
+ html[lang=ar] .promos{grid-template-columns:1fr!important}
+}
