@@ -422,3 +422,46 @@ html[dir=rtl] .promo-copy{margin-inline-start:auto}
  .doodle-icon{opacity:.56}
  .doodle-star{width:19px}.doodle-tulip{width:22px;height:34px}.doodle-cupcake{width:23px}
 }
+
+/* French desktop promo row uses the supplied design artwork itself for exact fidelity.
+   Live HTML/controls remain available for other languages and smaller screens. */
+.reference-hit{display:none}
+@media(min-width:1101px){
+ html[lang=fr] .promos{
+  position:relative;display:block!important;
+  width:107%;margin-inline:-3.5%;
+  aspect-ratio:4.9;padding:0;overflow:hidden;
+  background-image:url("Assets/original-ui.png");
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  background-position:center 88.3%;
+ }
+ html[lang=fr] .promos>.promo-card{display:none!important}
+ html[lang=fr] .promos>.reference-hit{
+  display:block;position:absolute;z-index:5;opacity:0;
+  border:0;padding:0;background:transparent;cursor:pointer;
+ }
+ html[lang=fr] .promos>.reference-hit:focus-visible{
+  opacity:1;background:#fffaf2e8;outline:3px dashed #0798dc;
+ }
+ html[lang=fr] .promos>.shop-hit{left:6.8%;top:56%;width:13%;height:20%}
+ html[lang=fr] .promos>.custom-hit{left:38.8%;top:57%;width:11%;height:20%}
+ html[lang=fr] .promos>.projects-hit{left:70.1%;top:57%;width:10%;height:20%}
+}
+@media(max-width:1100px){
+ .reference-hit{display:none!important}
+ html[lang=fr] .promos{background-image:none}
+ html[lang=fr] .promo-card{display:flex!important}
+}
+.page-doodles{z-index:3}
+.doodle-star.s5{left:1%;top:91%}
+.doodle-icon.s1{left:.5%;top:12%}
+.doodle-icon.s2{right:.5%;top:24%}
+.doodle-icon.s3{left:.5%;top:47%}
+.doodle-icon.s4{right:.5%;top:70%}
+.doodle-icon.t1{left:.2%;top:32%}
+.doodle-icon.t2{right:.2%;top:52%}
+.doodle-icon.t3{left:.4%;top:76%}
+.doodle-icon.c1{right:.4%;top:39%}
+.doodle-icon.c2{left:.2%;top:63%}
+.doodle-icon.c3{right:.5%;top:86%}
