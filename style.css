@@ -465,3 +465,13 @@ html[dir=rtl] .promo-copy{margin-inline-start:auto}
 .doodle-icon.c1{right:.4%;top:39%}
 .doodle-icon.c2{left:.2%;top:63%}
 .doodle-icon.c3{right:.5%;top:86%}
+
+/* Feather the reference crop into the existing page and fade its cropped edge details. */
+@media(min-width:1101px){
+ html[lang=fr] .promos{
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 89%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 89%,transparent 100%);
+  -webkit-mask-size:100% 100%;
+  mask-size:100% 100%;
+ }
+}
