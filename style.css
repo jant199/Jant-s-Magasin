@@ -276,3 +276,72 @@ body:after{display:none!important}
 main,.site-footer{position:relative;z-index:2!important}
 .site-footer{background:rgba(255,250,242,.97)}
 @media(max-width:720px){body:before{border-width:38px;border-image-width:38px}.site-header,.site-footer{background:transparent!important}}
+
+
+/* Reference-matched promo cards: handwritten type, clean appliqué edges, balanced copy/art. */
+.promos{align-items:stretch;gap:clamp(14px,1.2vw,22px);padding:4px 0 18px}
+.promo-card{
+  min-height:228px;
+  padding:26px 28px;
+  border:2px dashed #a8dff4;
+  border-radius:30px 24px 32px 26px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
+  background-image:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,0))!important;
+  isolation:isolate;
+}
+.promo-shop,.promo-projects{background-color:#dff3fb}
+.promo-custom{background-color:#ffeaee;border-color:#f4c1cc}
+.promo-card:before{display:none!important}
+.promo-copy{width:58%;max-width:58%;position:relative;z-index:2}
+.promo-card h2{
+  width:100%;max-width:100%;white-space:normal;overflow-wrap:normal;
+  font:700 clamp(30px,2.55vw,39px)/1.02 'Caveat','Noto Sans Arabic',cursive;
+  letter-spacing:.01em;margin:0 0 10px;color:#078fd0;
+}
+.promo-custom h2{color:#f4467b}
+.promo-card p{
+  width:100%;max-width:260px;min-height:50px;
+  font:600 clamp(18px,1.45vw,22px)/1.12 'Caveat','Noto Sans Arabic',cursive;
+  letter-spacing:.01em;margin:0 0 12px;color:#087fbd;
+}
+.promo-card .primary{
+  padding:10px 21px;
+  border-radius:42% 48% 45% 50% / 55% 42% 58% 45%;
+  font:700 clamp(17px,1.28vw,20px)/1.15 'Caveat','Noto Sans Arabic',cursive;
+  letter-spacing:.02em;
+  box-shadow:0 3px 0 #e4aebc;
+}
+.promo-card .primary.blue{box-shadow:0 3px 0 #9ccfe4}
+.promo-card>img{
+  right:-3px;bottom:2px;width:49%;height:88%;
+  object-fit:contain;object-position:right bottom;mix-blend-mode:multiply;
+  opacity:.98;z-index:1;
+}
+.promo-custom>img{right:0;width:47%;height:88%}
+.promo-projects>img{right:-1px;width:49%;height:90%}
+html[dir=rtl] .promo-card>img{right:auto;left:-3px}
+html[dir=rtl] .promo-copy{margin-inline-start:auto}
+@media(max-width:1100px){
+  .promo-card{min-height:215px;padding:22px 21px}
+  .promo-copy{width:59%;max-width:59%}
+  .promo-card h2{font-size:clamp(29px,3.2vw,36px)}
+  .promo-card p{font-size:clamp(18px,1.7vw,20px)}
+}
+@media(max-width:720px){
+  .promos{grid-template-columns:1fr;gap:14px;padding:4px 0 18px}
+  .promo-card{min-height:190px;padding:22px 23px;border-radius:26px 22px 29px 24px}
+  .promo-copy{width:61%;max-width:61%}
+  .promo-card h2{font-size:clamp(30px,8vw,37px);line-height:1.02}
+  .promo-card p{max-width:245px;min-height:44px;font-size:20px}
+  .promo-card .primary{font-size:19px;padding:9px 18px}
+  .promo-card>img{width:43%;height:83%;right:-2px}
+  .promo-custom>img{width:42%}
+  .promo-projects>img{width:44%}
+  html[dir=rtl] .promo-card>img{right:auto;left:-2px}
+}
+@media(max-width:390px){
+  .promo-card{min-height:184px;padding:19px 18px}
+  .promo-copy{width:63%;max-width:63%}
+  .promo-card h2{font-size:30px}
+  .promo-card p{font-size:18px}
+}
