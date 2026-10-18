@@ -1037,7 +1037,7 @@ html[lang] .promos{
  width:min(calc(100vw - 24px),1920px)!important;margin:14px auto 22px!important;padding:0!important;
  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0!important;
  aspect-ratio:2171/360!important;overflow:visible!important;
- background-image:url("Assets/promo-cards-banner.png?v=20261018-clean-art")!important;
+ background-image:url("Assets/promo-cards-banner.jpg?v=20261018-clean-art")!important;
  background-size:100% 100%!important;background-repeat:no-repeat!important;background-position:center!important
 }
 html[lang] .promos>.promo-card{
@@ -1090,7 +1090,7 @@ html[dir=rtl] .promos .promo-copy{direction:rtl!important;align-items:flex-end!i
  }
  html[lang] .promos>.promo-card{
   aspect-ratio:2.18!important;
-  background-image:url("Assets/promo-cards-banner.png?v=20261018-clean-art")!important;
+  background-image:url("Assets/promo-cards-banner.jpg?v=20261018-clean-art")!important;
   background-size:300% 100%!important;background-repeat:no-repeat!important
  }
  html[lang] .promos>.promo-shop{background-position:0% center!important}
