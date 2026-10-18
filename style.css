@@ -1013,3 +1013,12 @@ html[dir=rtl] .promos .promo-copy{align-items:flex-end!important;text-align:righ
  html[lang] .promos .promo-card p{font-size:clamp(15px,4vw,18px)!important;margin-bottom:7px!important}
  html[lang] .promos .promo-card .primary{min-height:36px!important;padding:7px 14px!important;font-size:14px!important}
 }
+
+
+/* Feather illustration edges so each artwork sits inside the card instead of reading as a pasted tile. */
+html[lang] .promos .promo-card>img{
+ width:38%!important;max-width:38%!important;flex-basis:38%!important;
+ -webkit-mask-image:radial-gradient(ellipse 70% 74% at 50% 50%,#000 43%,rgba(0,0,0,.88) 61%,rgba(0,0,0,.42) 82%,transparent 100%)!important;
+ mask-image:radial-gradient(ellipse 70% 74% at 50% 50%,#000 43%,rgba(0,0,0,.88) 61%,rgba(0,0,0,.42) 82%,transparent 100%)!important;
+}
+@media(max-width:560px){html[lang] .promos .promo-card>img{width:36%!important;max-width:36%!important;flex-basis:36%!important}}
