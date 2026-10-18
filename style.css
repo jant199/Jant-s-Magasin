@@ -633,3 +633,79 @@ html[dir=rtl] .promos .promo-projects>img{transform:none}
  html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:17px}
  html[lang=fr] .promos .promo-card>img,html[lang=en] .promos .promo-card>img,html[lang=ar] .promos .promo-card>img{width:43%;height:88%}
 }
+
+
+/* Use the supplied hand-painted card artwork as the actual card surface.
+   Translated HTML text sits over the original lettering area in every locale. */
+html[lang=fr] .promos>.promo-card,
+html[lang=en] .promos>.promo-card,
+html[lang=ar] .promos>.promo-card{
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ background-color:transparent!important;background-repeat:no-repeat!important;
+ background-size:327% auto!important;background-position-y:84%!important;
+ background-image:url("Assets/original-ui.png")!important;
+ aspect-ratio:2.18!important;min-height:0!important;padding:clamp(18px,1.7vw,27px)!important;
+ overflow:hidden!important;
+}
+html[lang=fr] .promos>.promo-shop,html[lang=en] .promos>.promo-shop,html[lang=ar] .promos>.promo-shop{background-position-x:5%!important}
+html[lang=fr] .promos>.promo-custom,html[lang=en] .promos>.promo-custom,html[lang=ar] .promos>.promo-custom{background-position-x:51.5%!important}
+html[lang=fr] .promos>.promo-projects,html[lang=en] .promos>.promo-projects,html[lang=ar] .promos>.promo-projects{background-position-x:96%!important}
+html[lang=fr] .promos>.promo-custom{--text-wash:rgba(255,235,239,.97)}
+html[lang=en] .promos>.promo-custom,html[lang=ar] .promos>.promo-custom{--text-wash:rgba(255,235,239,.97)}
+html[lang=fr] .promos>.promo-shop,html[lang=en] .promos>.promo-shop,html[lang=ar] .promos>.promo-shop,
+html[lang=fr] .promos>.promo-projects,html[lang=en] .promos>.promo-projects,html[lang=ar] .promos>.promo-projects{--text-wash:rgba(205,239,250,.97)}
+html[lang=fr] .promos>.promo-card:after,
+html[lang=en] .promos>.promo-card:after,
+html[lang=ar] .promos>.promo-card:after{
+ content:"";position:absolute;z-index:1;pointer-events:none;
+ top:10%;bottom:10%;left:2%;width:70%;
+ background:linear-gradient(90deg,var(--text-wash) 0%,var(--text-wash) 76%,rgba(205,239,250,0) 100%);
+}
+html[lang=fr] .promos>.promo-custom:after,
+html[lang=en] .promos>.promo-custom:after,
+html[lang=ar] .promos>.promo-custom:after{
+ background:linear-gradient(90deg,rgba(255,235,239,.97) 0%,rgba(255,235,239,.97) 76%,rgba(255,235,239,0) 100%);
+}
+html[lang=fr] .promos .promo-copy,
+html[lang=en] .promos .promo-copy,
+html[lang=ar] .promos .promo-copy{
+ z-index:2;width:68%;max-width:68%;padding:0;position:relative;
+}
+html[lang=fr] .promos .promo-card>img,
+html[lang=en] .promos .promo-card>img,
+html[lang=ar] .promos .promo-card>img{display:none!important}
+html[lang=fr] .promos .promo-card h2,
+html[lang=en] .promos .promo-card h2,
+html[lang=ar] .promos .promo-card h2{
+ width:100%;white-space:normal;margin:0 0 7px;
+ color:#078fd3;font:700 clamp(26px,2.25vw,39px)/1.04 'Comic Neue','Noto Sans Arabic',sans-serif;
+}
+html[lang=fr] .promos .promo-custom h2,
+html[lang=en] .promos .promo-custom h2,
+html[lang=ar] .promos .promo-custom h2{color:#f04478}
+html[lang=fr] .promos .promo-card p,
+html[lang=en] .promos .promo-card p,
+html[lang=ar] .promos .promo-card p{
+ max-width:100%;min-height:0;margin:0 0 10px;color:#078fd3;
+ font:600 clamp(16px,1.32vw,21px)/1.15 'Comic Neue','Noto Sans Arabic',sans-serif;
+}
+html[lang=fr] .promos .promo-card .primary,
+html[lang=en] .promos .promo-card .primary,
+html[lang=ar] .promos .promo-card .primary{
+ min-height:40px;padding:8px 17px;position:relative;z-index:2;
+ font:700 clamp(15px,1.18vw,19px)/1.1 'Comic Neue','Noto Sans Arabic',sans-serif;
+}
+html[dir=rtl] .promos .promo-card{direction:rtl}
+html[dir=rtl] .promos .promo-copy{margin:0!important;text-align:right;direction:rtl}
+html[dir=rtl] .promos>.promo-card:after{left:2%;right:auto;background:linear-gradient(90deg,rgba(205,239,250,.97) 0%,rgba(205,239,250,.97) 76%,rgba(205,239,250,0) 100%)}
+html[dir=rtl] .promos>.promo-custom:after{background:linear-gradient(90deg,rgba(255,235,239,.97) 0%,rgba(255,235,239,.97) 76%,rgba(255,235,239,0) 100%)}
+@media(max-width:1100px) and (min-width:721px){
+ html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{background-size:327% auto!important;background-position-y:87%!important;padding:15px!important;aspect-ratio:1.85!important}
+ html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{font-size:clamp(22px,2.7vw,31px)}
+ html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:15px}
+}
+@media(max-width:720px){
+ html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{background-size:327% auto!important;background-position-y:87%!important;min-height:170px!important;aspect-ratio:2.18!important;padding:18px!important}
+ html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{font-size:clamp(26px,7vw,34px)}
+ html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:16px}
+}
