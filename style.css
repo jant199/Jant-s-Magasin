@@ -1022,3 +1022,10 @@ html[lang] .promos .promo-card>img{
  mask-image:radial-gradient(ellipse 70% 74% at 50% 50%,#000 43%,rgba(0,0,0,.88) 61%,rgba(0,0,0,.42) 82%,transparent 100%)!important;
 }
 @media(max-width:560px){html[lang] .promos .promo-card>img{width:36%!important;max-width:36%!important;flex-basis:36%!important}}
+
+
+/* Let watercolor asset edges dissolve into the card fill. */
+html[lang] .promos .promo-card>img{
+ -webkit-mask-image:radial-gradient(ellipse 60% 65% at 50% 50%,#000 38%,rgba(0,0,0,.75) 57%,rgba(0,0,0,.25) 76%,transparent 94%)!important;
+ mask-image:radial-gradient(ellipse 60% 65% at 50% 50%,#000 38%,rgba(0,0,0,.75) 57%,rgba(0,0,0,.25) 76%,transparent 94%)!important
+}
