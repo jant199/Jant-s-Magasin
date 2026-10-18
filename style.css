@@ -859,3 +859,85 @@ html[dir=rtl] .promos .promo-copy{margin-inline-start:auto!important;margin-inli
  html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:17px!important}
  html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{background-position-y:87%!important}
 }
+
+
+/* Promo cards rebuilt from the supplied reference: pastel paper panels with separate, language-independent illustrations. */
+html[lang] .promos{
+  width:min(calc(100vw - 64px),1840px)!important;
+  margin:12px auto 20px!important;padding:0 0 12px!important;
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:clamp(14px,1.35vw,26px)!important;background:none!important;
+  aspect-ratio:auto!important;overflow:visible!important;
+}
+html[lang] .promos>.promo-card{
+  position:relative!important;isolation:isolate!important;display:flex!important;
+  flex-direction:row!important;align-items:center!important;justify-content:space-between!important;
+  gap:2%!important;min-width:0!important;min-height:0!important;height:auto!important;
+  aspect-ratio:2.14!important;padding:clamp(18px,2vw,34px) clamp(20px,2.4vw,42px)!important;
+  overflow:hidden!important;box-sizing:border-box!important;
+  border:2px dashed #9edfff!important;border-radius:34px 42px 31px 39px!important;
+  background:linear-gradient(135deg,rgba(216,244,255,.97),rgba(233,249,255,.96))!important;
+  box-shadow:0 3px 0 rgba(77,173,220,.12),inset 0 0 0 5px rgba(255,255,255,.35)!important;
+}
+html[lang] .promos>.promo-custom{
+  border-color:#ffb7c7!important;
+  background:linear-gradient(135deg,rgba(255,226,232,.98),rgba(255,241,240,.97))!important;
+  box-shadow:0 3px 0 rgba(240,96,137,.10),inset 0 0 0 5px rgba(255,255,255,.38)!important;
+}
+html[lang] .promos>.promo-projects{
+  border-color:#9edfff!important;
+  background:linear-gradient(135deg,rgba(216,244,255,.97),rgba(233,249,255,.96))!important;
+}
+html[lang] .promos .promo-card:before{
+ content:"♡";position:absolute!important;right:5%!important;top:5%!important;z-index:0!important;
+ display:block!important;background:none!important;mask:none!important;
+ color:#f05a86!important;font:700 25px/1 'Comic Neue',cursive!important;opacity:.8
+}
+html[lang] .promos .promo-card:after{display:none!important;content:none!important}
+html[lang] .promos .promo-copy{
+ position:relative!important;z-index:1!important;display:flex!important;flex:1 1 62%!important;
+ flex-direction:column!important;align-items:flex-start!important;width:62%!important;max-width:62%!important;
+ min-width:0!important;margin:0!important;text-align:start!important
+}
+html[lang] .promos .promo-card h2{
+ width:100%!important;max-width:100%!important;white-space:normal!important;
+ font:700 clamp(25px,2.25vw,43px)/1.02 'Caveat','Comic Neue','Noto Sans Arabic',cursive!important;
+ color:#078fd3!important;margin:0 0 8px!important;letter-spacing:.01em!important
+}
+html[lang] .promos .promo-custom h2{color:#f04478!important}
+html[lang] .promos .promo-card p{
+ width:100%!important;max-width:310px!important;min-height:2.2em!important;
+ font:600 clamp(16px,1.22vw,23px)/1.16 'Caveat','Comic Neue','Noto Sans Arabic',cursive!important;
+ color:#087fbd!important;margin:0 0 12px!important
+}
+html[lang] .promos .promo-card .primary{
+ position:relative!important;z-index:1!important;white-space:nowrap!important;
+ min-height:42px!important;padding:8px 20px!important;border:0!important;border-radius:999px!important;
+ background:#f43d76!important;color:white!important;
+ box-shadow:0 3px 0 rgba(196,38,86,.18)!important;
+ font:700 clamp(15px,1.1vw,20px)/1.1 'Comic Neue','Noto Sans Arabic',sans-serif!important
+}
+html[lang] .promos .promo-card .primary.blue{background:#079bd8!important;box-shadow:0 3px 0 rgba(0,110,170,.2)!important}
+html[lang] .promos .promo-card>img{
+ display:block!important;position:relative!important;z-index:1!important;flex:0 0 35%!important;
+ width:35%!important;max-width:35%!important;height:82%!important;max-height:82%!important;
+ object-fit:contain!important;object-position:center!important;margin:0!important;
+ border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important
+}
+html[dir=rtl] .promos .promo-card{direction:rtl!important}
+html[dir=rtl] .promos .promo-copy{align-items:flex-end!important;text-align:right!important}
+@media(max-width:1050px){
+ html[lang] .promos{width:calc(100vw - 40px)!important;grid-template-columns:1fr!important;gap:14px!important}
+ html[lang] .promos>.promo-card{aspect-ratio:3.1!important;padding:18px 7%!important}
+ html[lang] .promos .promo-card h2{font-size:clamp(26px,4vw,38px)!important}
+ html[lang] .promos .promo-card p{font-size:clamp(17px,2vw,21px)!important}
+}
+@media(max-width:560px){
+ html[lang] .promos{width:calc(100vw - 24px)!important;gap:12px!important}
+ html[lang] .promos>.promo-card{aspect-ratio:2.6!important;padding:16px 5%!important;border-radius:24px 29px 22px 28px!important}
+ html[lang] .promos .promo-copy{flex-basis:65%!important;width:65%!important;max-width:65%!important}
+ html[lang] .promos .promo-card>img{flex-basis:32%!important;width:32%!important;max-width:32%!important}
+ html[lang] .promos .promo-card h2{font-size:clamp(22px,6vw,31px)!important;margin-bottom:5px!important}
+ html[lang] .promos .promo-card p{font-size:clamp(15px,4vw,18px)!important;margin-bottom:7px!important}
+ html[lang] .promos .promo-card .primary{min-height:36px!important;padding:6px 14px!important;font-size:14px!important}
+}
