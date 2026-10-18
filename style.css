@@ -709,3 +709,74 @@ html[dir=rtl] .promos>.promo-custom:after{background:linear-gradient(90deg,rgba(
  html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{font-size:clamp(26px,7vw,34px)}
  html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:16px}
 }
+
+
+/* Promo cards: match the supplied reference and keep translated HTML visible in FR, EN and AR. */
+html[lang=fr] .promos,html[lang=en] .promos,html[lang=ar] .promos{
+ position:relative!important;left:50%!important;transform:translateX(-50%)!important;
+ width:min(calc(100vw - 48px),1920px)!important;max-width:1920px!important;
+ margin:0!important;aspect-ratio:auto!important;padding:0 0 18px!important;
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:clamp(14px,1.3vw,24px)!important;overflow:visible!important;
+ background:none!important;-webkit-mask-image:none!important;mask-image:none!important;
+}
+html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{
+ display:flex!important;visibility:visible!important;opacity:1!important;position:relative!important;
+ width:auto!important;height:auto!important;min-width:0!important;min-height:clamp(170px,14.6vw,286px)!important;
+ aspect-ratio:auto!important;padding:clamp(20px,1.5vw,30px) clamp(20px,1.7vw,34px)!important;
+ overflow:hidden!important;isolation:isolate!important;
+ border:2px dashed #a4ddf4!important;border-radius:clamp(24px,2vw,36px)!important;
+ box-shadow:none!important;background-color:#e5f7ff!important;
+ background-image:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,0))!important;
+ background-position:center!important;background-size:auto!important;background-repeat:no-repeat!important;
+}
+html[lang=fr] .promos>.promo-custom,html[lang=en] .promos>.promo-custom,html[lang=ar] .promos>.promo-custom{
+ background-color:#ffedf0!important;border-color:#f5c5cf!important}
+html[lang=fr] .promos .promo-card:before,html[lang=en] .promos .promo-card:before,html[lang=ar] .promos .promo-card:before{
+ content:""!important;display:block!important;position:absolute!important;inset:6px!important;z-index:0!important;
+ border:1px dashed rgba(255,255,255,.95)!important;border-radius:inherit!important;pointer-events:none!important}
+html[lang=fr] .promos .promo-card:after,html[lang=en] .promos .promo-card:after,html[lang=ar] .promos .promo-card:after{
+ content:none!important;display:none!important}
+html[lang=fr] .promos .promo-copy,html[lang=en] .promos .promo-copy,html[lang=ar] .promos .promo-copy{
+ position:relative!important;z-index:2!important;width:66%!important;max-width:66%!important;min-width:0!important;
+ margin:0!important;text-align:start!important}
+html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{
+ width:150%!important;max-width:none!important;white-space:normal!important;
+ font:700 clamp(29px,2.55vw,47px)/1.02 'Comic Neue','Noto Sans Arabic',sans-serif!important;
+ color:#078fd3!important;margin:0 0 10px!important}
+html[lang=fr] .promos .promo-custom h2,html[lang=en] .promos .promo-custom h2,html[lang=ar] .promos .promo-custom h2{color:#f04478!important}
+html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{
+ width:100%!important;max-width:300px!important;min-height:2.2em!important;
+ font:600 clamp(17px,1.35vw,25px)/1.1 'Comic Neue','Noto Sans Arabic',sans-serif!important;
+ color:#087fbd!important;margin:0 0 12px!important}
+html[lang=fr] .promos .promo-card .primary,html[lang=en] .promos .promo-card .primary,html[lang=ar] .promos .promo-card .primary{
+ position:relative!important;z-index:2!important;white-space:nowrap!important;
+ min-height:40px!important;padding:8px 17px!important;border-radius:999px!important;
+ font:700 clamp(15px,1.18vw,19px)/1.1 'Comic Neue','Noto Sans Arabic',sans-serif!important}
+html[lang=fr] .promos .promo-card>img,html[lang=en] .promos .promo-card>img,html[lang=ar] .promos .promo-card>img{
+ display:block!important;position:absolute!important;z-index:1!important;right:0!important;left:auto!important;
+ bottom:3px!important;width:43%!important;height:68%!important;object-fit:contain!important;
+ object-position:right bottom!important;mix-blend-mode:multiply!important;opacity:.98!important;transform:none!important}
+html[lang=fr] .promos .promo-custom>img,html[lang=en] .promos .promo-custom>img,html[lang=ar] .promos .promo-custom>img{right:2px!important;width:40%!important;height:70%!important}
+html[lang=fr] .promos .promo-projects>img,html[lang=en] .promos .promo-projects>img,html[lang=ar] .promos .promo-projects>img{width:43%!important;height:70%!important}
+html[dir=rtl] .promos .promo-card{direction:rtl!important}
+html[dir=rtl] .promos .promo-copy{margin-inline-start:auto!important;margin-inline-end:0!important;text-align:right!important}
+html[dir=rtl] .promos .promo-card>img{right:auto!important;left:0!important;object-position:left bottom!important;transform:none!important}
+@media(max-width:1100px){
+ html[lang=fr] .promos,html[lang=en] .promos,html[lang=ar] .promos{width:min(calc(100vw - 40px),1920px)!important}
+ html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{
+  min-height:170px!important;padding:20px 18px!important}
+ html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{font-size:clamp(24px,3vw,34px)!important}
+ html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{font-size:clamp(16px,1.65vw,19px)!important}
+}
+@media(max-width:720px){
+ html[lang=fr] .promos,html[lang=en] .promos,html[lang=ar] .promos{
+  width:calc(100vw - 24px)!important;gap:12px!important;padding-bottom:16px!important;
+  grid-template-columns:1fr!important}
+ html[lang=fr] .promos>.promo-card,html[lang=en] .promos>.promo-card,html[lang=ar] .promos>.promo-card{
+  min-height:185px!important;padding:18px 20px!important;border-radius:25px 21px 28px 22px!important}
+ html[lang=fr] .promos .promo-copy,html[lang=en] .promos .promo-copy,html[lang=ar] .promos .promo-copy{width:66%!important;max-width:66%!important}
+ html[lang=fr] .promos .promo-card h2,html[lang=en] .promos .promo-card h2,html[lang=ar] .promos .promo-card h2{font-size:clamp(28px,8vw,36px)!important}
+ html[lang=fr] .promos .promo-card p,html[lang=en] .promos .promo-card p,html[lang=ar] .promos .promo-card p{max-width:220px!important;font-size:18px!important}
+ html[lang=fr] .promos .promo-card>img,html[lang=en] .promos .promo-card>img,html[lang=ar] .promos .promo-card>img{width:40%!important;height:62%!important}
+}
