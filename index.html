@@ -5,15 +5,25 @@
   .page-doodles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
   .page-doodles .doodle-icon{position:absolute;display:block;width:clamp(20px,2.4vw,32px);height:clamp(20px,2.4vw,32px);opacity:.92;filter:drop-shadow(0 2px 0 #fffaf2)}
   .page-doodles .doodle-icon svg{display:block;width:100%;height:100%;overflow:visible}
-  .doodle-four-star svg{fill:#f5d477;stroke:#d7ad4d;stroke-width:1.1;stroke-linejoin:round}
+  .doodle-star svg,.doodle-four-star svg{fill:#f5d477;stroke:#d7ad4d;stroke-width:1.1;stroke-linejoin:round}
+  .doodle-tulip svg{fill:#ff8ca8;stroke:#e86d91;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+  .doodle-tulip .leaf{fill:#9bcba7;stroke:#6e9e7a}.doodle-tulip .petal{fill:#ff8ca8}.doodle-tulip path:last-child{fill:none;stroke:#fff4ed}
+  .doodle-cupcake svg{stroke:#a47769;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+  .doodle-cupcake .icing{fill:#fff1d8}.doodle-cupcake .wrapper{fill:#ffd1dd}.doodle-cupcake .liner{fill:none;stroke:#ff7996}.doodle-cupcake .cherry{fill:#ff7996}.doodle-cupcake .flame{fill:none;stroke:#ff7996}
   .doodle-coil .coil-body{fill:#ff9fba;stroke:#e86d91;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
   .doodle-coil .coil-face{fill:none;stroke:#684e59;stroke-width:2;stroke-linecap:round}
   .doodle-coil .coil-blush{fill:none;stroke:#e86d91;stroke-width:2.5;stroke-linecap:round}
-  .coil-a{left:5.5%;top:13.5%;transform:rotate(-14deg)} .fs-a{right:6.5%;top:19%;transform:rotate(9deg)}
-  .coil-b{right:5.8%;top:35%;transform:rotate(12deg)} .fs-b{left:6%;top:43%;transform:rotate(-9deg)}
-  .coil-c{left:7%;top:66%;transform:rotate(-8deg)} .fs-c{right:6.3%;top:58%;transform:rotate(14deg)}
-  .coil-d{right:6.5%;top:83%;transform:rotate(10deg)} .fs-d{left:5.7%;top:88%;transform:rotate(-12deg)}
-  @media(max-width:720px){.page-doodles .doodle-icon{width:21px;height:21px}.coil-a{left:8%;top:17%}.fs-a{right:8%;top:24%}.coil-b{right:7%;top:42%}.fs-b{left:8%;top:50%}.coil-c{left:9%;top:68%}.fs-c{right:8%;top:63%}.coil-d{right:8%;top:84%}.fs-d{left:7%;top:91%}}
+  .s1{left:10%;top:12%;transform:rotate(-9deg)} .t1{right:7%;top:11%;width:26px;height:39px}
+  .c1{left:6%;top:29%;width:28px;height:28px} .s2{right:11%;top:31%;transform:rotate(12deg)}
+  .t2{left:8%;top:53%;width:24px;height:36px} .s3{right:7%;top:49%;transform:rotate(-7deg)}
+  .c2{right:10%;top:70%;width:27px;height:27px} .t3{right:7%;top:84%;width:25px;height:38px}
+  .s4{left:13%;top:77%;transform:rotate(10deg)} .c3{left:6%;top:91%;width:26px;height:26px}
+  .s5{right:14%;top:94%;transform:rotate(-12deg)}
+  .coil-a{left:5.5%;top:19%;transform:rotate(-14deg)} .fs-a{right:5.5%;top:23%;transform:rotate(9deg)}
+  .coil-b{right:5.3%;top:40%;transform:rotate(12deg)} .fs-b{left:5%;top:44%;transform:rotate(-9deg)}
+  .coil-c{left:5.5%;top:64%;transform:rotate(-8deg)} .fs-c{right:5.5%;top:61%;transform:rotate(14deg)}
+  .coil-d{right:5.5%;top:81%;transform:rotate(10deg)} .fs-d{left:5%;top:86%;transform:rotate(-12deg)}
+  @media(max-width:720px){.page-doodles .doodle-icon{width:21px;height:21px}.t1,.t2,.t3{width:19px;height:29px}.c1,.c2,.c3{width:19px;height:19px}.s1{left:9%;top:10%}.t1{right:8%;top:14%}.c1{left:7%;top:27%}.s2{right:10%;top:33%}.t2{left:8%;top:51%}.s3{right:8%;top:49%}.c2{right:9%;top:72%}.t3{right:7%;top:84%}.s4{left:11%;top:78%}.c3{left:6%;top:91%}.s5{right:12%;top:95%}.coil-a{left:5%;top:19%}.fs-a{right:5%;top:22%}.coil-b{right:4%;top:39%}.fs-b{left:4%;top:44%}.coil-c{left:4%;top:64%}.fs-c{right:4%;top:60%}.coil-d{right:4%;top:82%}.fs-d{left:4%;top:87%}}
   @media(prefers-reduced-motion:no-preference){.page-doodles .doodle-icon{animation:doodle-float 4.8s ease-in-out infinite alternate}.page-doodles .doodle-icon:nth-child(even){animation-delay:-2.2s}@keyframes doodle-float{to{translate:0 -4px}}}
   </style>\n</head>
 <body>
