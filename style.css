@@ -1119,3 +1119,8 @@ html[dir=rtl] .promos .promo-copy{direction:rtl!important;align-items:flex-end!i
 .hero-art img{object-fit:cover;object-position:center center}
 .hero-art:after{inset:7px!important;clip-path:none!important;border:1px dashed rgba(224,177,145,.72)!important;border-radius:inherit;box-shadow:inset 0 0 18px rgba(255,250,242,.12)}
 @media(max-width:720px){.hero-art{width:100%;margin-left:0;border-radius:8% 2% 2% 8% / 8% 2% 2% 10%}}
+
+
+/* Handwritten print typography throughout the storefront */
+html:not([lang="ar"]) body,html:not([lang="ar"]) body *{font-family:'Kalam','Comic Neue',sans-serif!important}
+html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic','Kalam',sans-serif!important}
