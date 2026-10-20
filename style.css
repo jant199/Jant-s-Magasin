@@ -1135,3 +1135,5 @@ html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic',sans-
 
 /* Sacramento lettering for the five requested homepage headings */
 html:not([lang="ar"]) body .brand > span,html:not([lang="ar"]) body .hero h1,html:not([lang="ar"]) body .main-nav button[data-action="shop"],html:not([lang="ar"]) body .main-nav button[data-action="custom"],html:not([lang="ar"]) body .promo-card h2{font-family:'Sacramento',cursive!important;font-weight:400!important}
+
+html[lang] .promos .promo-card h2{font-family:"Sacramento",cursive!important;font-weight:400!important}
