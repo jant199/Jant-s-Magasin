@@ -1126,16 +1126,8 @@ html:not([lang="ar"]) body,html:not([lang="ar"]) body *{font-family:'Kalam','Com
 html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic','Kalam',sans-serif!important}
 
 
-/* Softer, more delicate handwritten palette and weight */
-:root{--ink:#617580;--blue:#648fa5;--pink:#c97e93;--thread:#ead2c1;--shadow:0 16px 44px rgba(97,117,128,.12)}
-html:not([lang="ar"]) body *{font-weight:400!important}
-html[lang="ar"] body *{font-weight:400!important}
+/* Delicate rounded handwritten typography; restore the original palette */
+:root{--ink:#35536d;--blue:#0798dc;--pink:#ff4c83;--thread:#efcbb1;--shadow:0 18px 60px #5a49301f}
+html:not([lang="ar"]) body,html:not([lang="ar"]) body *{font-family:'Comic Neue',sans-serif!important;font-weight:400!important}
+html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic',sans-serif!important;font-weight:400!important}
 .price,.cart-count,strong{font-weight:700!important}
-.primary{background:#f2b1c0!important;color:#704854!important;box-shadow:0 3px 0 #e7cbd2!important}
-.primary.blue{background:#b7dce8!important;color:#476777!important;box-shadow:0 3px 0 #d0e6ed!important}
-.main-nav .active{border-bottom-color:#d99aab}
-.promo-shop,.promo-projects{background-color:#edf7f9!important}
-.promo-custom{background-color:#fbf0f2!important;border-color:#ecd1d8!important}
-.promo-card{border-color:#c8e1e8!important}
-.promo-custom .promo-card{border-color:#ecd1d8!important}
-.product-card:hover,.work-tile:hover{border-color:#9fc9d7!important}
