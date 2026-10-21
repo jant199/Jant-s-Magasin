@@ -1164,3 +1164,7 @@ html[lang] .promos .promo-card h2{font-size:clamp(21px,1.8vw,32px)!important}
  html:not([lang="ar"]) body .main-nav button[data-action="shop"],html:not([lang="ar"]) body .main-nav button[data-action="custom"]{font-size:11px!important}
  html[lang] .promos .promo-card h2{font-size:clamp(24px,4vw,27px)!important}
 }
+
+
+/* Move the custom creations heading 3 cm to the right. */
+html[lang] .promos .promo-custom h2{transform:translateX(3cm)!important}
