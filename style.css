@@ -1137,3 +1137,18 @@ html[lang="ar"] body,html[lang="ar"] body *{font-family:'Noto Sans Arabic',sans-
 html:not([lang="ar"]) body .brand > span,html:not([lang="ar"]) body .hero h1,html:not([lang="ar"]) body .main-nav button[data-action="shop"],html:not([lang="ar"]) body .main-nav button[data-action="custom"],html:not([lang="ar"]) body .promo-card h2{font-family:'Satisfy',cursive!important;font-weight:400!important}
 
 html[lang] .promos .promo-card h2{font-family:"Satisfy",cursive!important;font-weight:400!important}
+
+
+/* Slightly smaller selected titles and a blue hero description */
+html:not([lang="ar"]) body .brand > span{font-size:clamp(29px,3.6vw,48px)!important}
+html:not([lang="ar"]) body .hero h1{font-size:clamp(50px,5.5vw,74px)!important}
+html:not([lang="ar"]) body .main-nav button[data-action="shop"],html:not([lang="ar"]) body .main-nav button[data-action="custom"]{font-size:14px!important}
+html[lang] .promos .promo-card h2{font-size:clamp(24px,2.1vw,36px)!important}
+html:not([lang="ar"]) body .hero-description{font-size:clamp(16px,1.4vw,19px)!important;color:var(--blue)!important}
+@media(max-width:720px){
+  html:not([lang="ar"]) body .brand > span{font-size:30px!important}
+  html:not([lang="ar"]) body .hero h1{font-size:clamp(53px,9vw,60px)!important}
+  html:not([lang="ar"]) body .main-nav button[data-action="shop"],html:not([lang="ar"]) body .main-nav button[data-action="custom"]{font-size:12px!important}
+  html[lang] .promos .promo-card h2{font-size:clamp(26px,4.5vw,29px)!important}
+  html:not([lang="ar"]) body .hero-description{font-size:17px!important}
+}
