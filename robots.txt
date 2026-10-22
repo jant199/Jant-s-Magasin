@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jant199.github.io/Jant-s-Magasin/sitemap.xml
